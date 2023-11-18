@@ -7,7 +7,7 @@ const AuthPage = (props) => {
     e.preventDefault();
     const { value } = e.target[0];
     axios
-      .post(`http://localhost:3000/authenticate`, { username: value })
+      .post(`http://Your-Wifi-IPv4-Address:3000/authenticate`, { username: value })
       .then((res) => {
         props.onAuth({ ...res.data, secret: value });
       })
